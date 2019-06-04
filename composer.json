@@ -1,0 +1,21 @@
+{
+    "name": "is7/yii2-bootstrap-panel",
+    "description": "Yii2 Bootstrap Panel",
+    "keywords": ["yii2", "bootstrap", "panel", "collapse"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Zhukov",
+            "email": "dmitry@zhukovs.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "is7\\bootstrap\\": ""
+        }
+    }
+}
