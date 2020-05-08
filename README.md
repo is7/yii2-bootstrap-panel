@@ -15,7 +15,7 @@ $ composer require is7/yii2-bootstrap-panel "dev-master"
 or add
 
 ```
-"derekisbusy/yii2-bootstrap-panel": "dev-master"
+"is7/yii2-bootstrap-panel": "dev-master"
 ```
 
 to the ```require``` section of your `composer.json` file then run composer update.
@@ -40,6 +40,12 @@ to the ```require``` section of your `composer.json` file then run composer upda
 
 - **collapsed** whether or not the panel is initially collapsed.  Defaults to false.
 
+- **buttons** array of buttons, that will be added to the title. 
+
+- **minimizable** whether to add minimize button, which collapse panel to minimum size. Defaults to false
+
+- **panelOptions**  the tag options in terms of name-value pairs.
+
 ##Examples
 
 ###Basic Example
@@ -50,7 +56,6 @@ echo Panel::widget([
     'title' => 'My Panel',
     'content' => '...',
     'footer' => 'footer content'
-    ])
 ]);
 ```
 
@@ -70,6 +75,27 @@ echo Panel::begin([
 Panel::end();
 ```
 
+###Panel with buttons
+```php
+use is7\bootstrap\Panel;
+
+echo Panel::widget([
+    'title'=>'My Panel',
+    'content' => '...',
+    'context' => 'success',   
+    'collapsible' => true,
+    'minimizable' => true,
+    'buttons' => [                    
+        [
+            'options' => [
+                'class' => 'btn btn-default delete-button',
+                'title' => 'Delete Panel'
+            ],
+            'icon' => 'trash' // Will be converted to the glyphicon-trash icon. HTML tag can be used instead
+        ],
+    ]
+]);
+```
 
 
 

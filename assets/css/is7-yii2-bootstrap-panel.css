@@ -1,0 +1,3 @@
+.panel-buttons { position: relative; top: -5px; }
+.panel-buttons > a { margin-left: 5px; }
+.panel-buttons > a:first-child { margin-left: 0px; }

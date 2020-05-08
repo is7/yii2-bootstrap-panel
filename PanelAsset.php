@@ -16,5 +16,25 @@ class PanelAsset extends AssetBundle
      */
     public $depends = [
         'yii\bootstrap\BootstrapAsset',
+        'yii\web\JqueryAsset',
+    ];
+
+    /**
+     * @inheritdoc
+     */
+    public $sourcePath = __DIR__.'/assets';
+
+    /**
+     * @inheritdoc
+     */
+    public $css = [
+        'css/is7-yii2-bootstrap-panel.css'
+    ];
+
+    /**
+     * @inheritdoc
+     */
+    public $js = [
+        'js/is7-yii2-bootstrap-panel.js'
     ];
 }
