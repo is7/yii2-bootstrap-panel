@@ -20,7 +20,7 @@ or add
 
 to the ```require``` section of your `composer.json` file then run composer update.
 
-##Options
+## Options
  - **title**    title displayed in the head section of the panel.
  
  - **titleOptions**    the tag options in terms of name-value pairs.
@@ -46,9 +46,9 @@ to the ```require``` section of your `composer.json` file then run composer upda
 
 - **panelOptions**  the tag options in terms of name-value pairs.
 
-##Examples
+## Examples
 
-###Basic Example
+### Basic Example
 ```php
 use is7\bootstrap\Panel;
 
@@ -59,7 +59,7 @@ echo Panel::widget([
 ]);
 ```
 
-###Extended example
+### Extended example
 ```php
 use is7\bootstrap\Panel;
 
@@ -75,7 +75,7 @@ echo Panel::begin([
 Panel::end();
 ```
 
-###Panel with buttons
+### Panel with buttons
 ```php
 use is7\bootstrap\Panel;
 
