@@ -67,10 +67,18 @@ class Panel extends \yii\base\Widget
         }
 
         $this->title = Html::tag('div', $this->title, ['class' => 'panel-title']);
+
+        if (is_null($this->content)) {
+            ob_start();
+        }
     }
 
     public function run()
     {
+        if (is_null($this->content)) {
+            $this->content = ob_get_clean();
+        }
+
         Html::addCssClass($this->panelOptions, ['panel', 'panel-'.$this->context]);
         echo Html::beginTag('div', $this->panelOptions);
         echo Html::tag('div', $this->title, ['class'=>'panel-heading']);
