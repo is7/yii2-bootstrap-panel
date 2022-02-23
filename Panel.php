@@ -87,9 +87,11 @@ class Panel extends \yii\base\Widget
             echo Html::beginTag('div', ['id' => $this->id.'-collapse', 'class' => 'panel-collapse '.( $this->collapsed ? 'collapse' : 'in')]);
         }
 
-        echo Html::beginTag('div', ['class'=>'panel-body']);
-        echo $this->content;
-        echo Html::endTag('div');
+        if ($this->content !== false) {
+            echo Html::beginTag('div', ['class' => 'panel-body']);
+            echo $this->content;
+            echo Html::endTag('div');
+        }
         if($this->footer) {
             echo Html::tag('div', $this->footer, ['class' => 'panel-footer']);
         }
